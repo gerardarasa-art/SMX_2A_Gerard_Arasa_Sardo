@@ -1,21 +1,22 @@
 negatiu = False
-i = 0
 
-print("Introdueix 10 nombres:")
+print("Introdueix 10 nombres (enters o decimals):")
 
-# Bucle while que es repeteix 10 vegades (mentre i < 10)
-while i < 10:
-    # Demanem el nombre a l'usuari
-    nombre = int(input(f"Introdueix el nombre {i+1} de 10: "))
-
-    # Comprovem si el nombre és negatiu
+# Bucle per llegir 10 nombres
+for i in range(10):
+    # Demanem el nombre i el convertim directament a decimal amb el float
+    nombre = float(input(f"Nombre {i + 1}: "))
+    
+    # Comprovem la condició per canviar la bandera
     if nombre < 0:
+        # Si el nombre és menor que zero, canviem la bandera a True.
         negatiu = True
-        break  # Sortim del bucle immediatament
+        break # Podem sortir del bucle ja que hem trobat un nombre negatiu
 
-    i += 1
-# Després del bucle, comprovem si hi havia algun nombre negatiu
+print("\n--- Resultat ---") # Comprovació visual
+
+# Comprovem l'estat final de la bandera
 if negatiu:
-    print("Hi havia almenys un nombre negatiu")
+    print("Hi havia almenys un nombre negatiu.")
 else:
-    print("No hi ha cap nombre negatiu")
+    print("No hi ha cap nombre negatiu.")

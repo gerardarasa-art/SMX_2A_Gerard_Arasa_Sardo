@@ -25,4 +25,3 @@ if deu_trobat == True:
     print("Hi ha hagut alguna nota que té un 10")
 else:
     print("No hi ha cap 10")
-    # Fi del programa.
