@@ -1,16 +1,28 @@
-deu = False
-nota = 0  # Pot ser qualsevol valor diferent de -1
+# Si trobem un 10, la canviarem a True.
+deu_trobat = False
 
-print("Introdueix notes (de 0 a 10). Introdueix -1 per finalitzar.")
+# Lectura de la primera nota.
+# El programa s'aturarà aquí esperant una entrada de l'usuari.
+print("Introdueix una nota (0-10) o -1 per finalitzar:")
+nota = int(input())
 
+# Bucle principal: continuarà mentre la nota llegida NO sigui -1.
 while nota != -1:
-    nota = int(input("Introdueix una nota (de 0 a 10): ")) # Demana la nota a l'usuari
+    
+    # Comprovem si la nota actual és un 10.
+    if nota == 10:
+        # Trobem el primer 10, ja no cal canviar aquesta variable més.
+        deu_trobat = True
+    
+    # Lectura de la següent nota per a la pròxima iteració.
+    print("Introdueix la següent nota (0-10) o -1 per finalitzar:")
+    nota = int(input())
 
-    if nota == 10: # Si la nota és 10
-        deu = True
+# Fi del bucle. S'ha llegit el -1.
 
-if deu: # Després del bucle, mostrem el resultat
+# Comprovació del resultat final només amb 'if' i 'else'.
+if deu_trobat == True:
     print("Hi ha hagut alguna nota que té un 10")
 else:
     print("No hi ha cap 10")
-# Fi del programa
+    # Fi del programa.
