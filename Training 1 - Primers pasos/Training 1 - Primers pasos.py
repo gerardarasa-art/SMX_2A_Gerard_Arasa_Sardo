@@ -1,0 +1,1 @@
+print("Hola món!") # El print fa que el que hi estigui dintre es repordueixi a la consola"
