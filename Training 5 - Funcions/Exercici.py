@@ -1,6 +1,3 @@
-from os import major
-
-
 def calcular_area_quadrat():
     Costat = float(input("Introdueix el costat del quadrat: ")) # Demanem el costat del quadrat a l'usuari
 
